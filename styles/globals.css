@@ -1,0 +1,221 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* lighter shades of primary color */
+   --pry-light-1: #fff8eb;
+   --pry-light-2: #fff1d7;
+   --pry-light-3: #ffe4ae;
+   --pry-dark: #ccb17b;
+   --pry-dark-2: #806f4d;
+  /* primary/main color */
+  --pry-main: #ffdd9a;
+  --sec-main: #0e1e52;
+  --sec-light-main: #7da9f4;
+  --sec-light-1: #f2f6fe;
+  --sec-light-2: #e5eefd;
+  --sec-light-3: #bed4fa;
+  /* dark shades of primary color*/
+  --sec-dark-1: #0b1842;
+  --sec-dark-2: #081231;
+  --sec-dark-3: #040919;
+  /* 0thers */
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --radius-lg: 1rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: var(--sec-light-2);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: .8rem;
+  min-height: 100vh;
+  width: 100vw;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+h2,
+h3{
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+
+.brand{
+  font-size: 2rem;
+  text-align: center;
+}
+.primary{
+  color: var(--pry-dark);
+}
+.bg-primary{
+  background-color: var(--pry-dark);
+}
+.page {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.page {
+  min-height: calc(100vh - (6rem + 50rem));
+}
+
+.form {
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  padding: 2rem 2.5rem;
+}
+label {
+  display: block;
+  font-size: var(--smallText);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--borderRadius);
+  background: var(--grey-0);
+  border-color: transparent;
+  border: 1px solid var(--grey-300);
+}
+.form-row {
+  margin-bottom: 1rem;
+}
+textarea {
+  width: 100%;
+  height: 8rem;
+}
+
+::placeholder {
+  color: var(--grey-600);
+}
+.form-alert {
+  color: var(--red-dark);
+  font-size: var(--extraSmallText);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
+}
+hr {
+  border-top: var(--line);
+}
+
+button,
+.btn{
+  cursor: pointer;
+  background: var(--pry-dark);
+  border: none;
+  border-radius: 2rem;
+  letter-spacing: var(--spacing);
+  padding: 1rem 1.5rem;
+  font-size: .85rem;
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  margin: 2rem 0;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+button:hover,
+.btn:hover {
+  box-shadow: var(--dark-shadow);
+}
+a{
+  color: var(--sec-dark-2);
+  font-stretch: 1rem;
+}
+.rotate{
+  transform: rotate(-45deg);
+}
+.cta{
+  cursor: pointer;
+  color: var(--clr-grey-1);
+  font-size: .7rem;
+}
+.slash{
+  margin-right: 2rem;
+  color: var(--pry-dark);
+  font-size: 2rem;
+}
+.arrow{
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--pry-dark);
+}
+.icon{
+  font-size: 4rem;
+  margin-left: .5rem;
+  font-weight: 900;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
